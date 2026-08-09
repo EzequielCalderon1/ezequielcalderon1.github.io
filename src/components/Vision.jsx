@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import StarburstBadge from './StarburstBadge'
 
 const PILLARS = [
   {
@@ -63,45 +62,45 @@ const stagger = {
 export default function Vision() {
   return (
     <section id="vision" aria-labelledby="vision-heading" className="bg-[#1d3461] text-white h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-4 h-full flex flex-col justify-center">
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="visible"
         >
-          {/* Header */}
-          <motion.div variants={fadeUp} className="mb-12">
-            <StarburstBadge number="04" className="mb-6 w-16 h-16" />
-            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-white/40 uppercase mb-5">
+          {/* Header — compact */}
+          <motion.div variants={fadeUp} className="mb-5">
+            <p className="font-mono text-[0.65rem] tracking-[0.25em] text-white/40 uppercase mb-2">
               04 &mdash; Mi visión como gerente
             </p>
             <h2
               id="vision-heading"
-              className="font-display uppercase text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight text-white mb-4"
+              className="font-display uppercase text-4xl lg:text-5xl xl:text-6xl leading-[0.9] tracking-tight text-white mb-2"
             >
-              Cuatro<br />
-              <span className="text-ps-red">pilares</span>
+              Cuatro <span className="text-ps-red">pilares</span>
             </h2>
-            <p className="text-white/55 text-sm lg:text-base max-w-xl leading-relaxed">
-              Mi enfoque como gerente se sostiene en cuatro pilares que garantizan
-              un equipo eficiente, comprometido y orientado a resultados.
+            <p className="text-white/50 text-xs lg:text-sm max-w-2xl leading-relaxed">
+              Mi enfoque como gerente se sostiene en cuatro pilares.
+              Seré consciente de que todavía tengo aspectos por desarrollar,
+              pero mi principal fortaleza es la disposición para aprender y asumir
+              nuevos retos con responsabilidad.
             </p>
           </motion.div>
 
-          {/* Pillars grid */}
+          {/* Pillars grid — 2×2 */}
           <motion.div
             variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-3"
           >
             {PILLARS.map((p) => (
               <motion.div
                 key={p.title}
                 variants={fadeUp}
-                className="relative rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/20 transition-all p-6 overflow-hidden group"
+                className="relative rounded-xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] hover:border-white/20 transition-all p-4 overflow-hidden group"
               >
                 {/* number watermark */}
                 <span
-                  className="absolute -top-4 -right-2 font-display text-[6rem] leading-none font-black opacity-[0.05] select-none text-white"
+                  className="absolute -top-3 -right-1 font-display text-[5rem] leading-none font-black opacity-[0.05] select-none text-white"
                   aria-hidden="true"
                 >
                   {p.number}
@@ -109,36 +108,26 @@ export default function Vision() {
 
                 {/* top accent */}
                 <div
-                  className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl opacity-60"
+                  className="absolute top-0 left-0 right-0 h-[2px] rounded-t-xl opacity-70"
                   style={{ background: p.color }}
                   aria-hidden="true"
                 />
 
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                  style={{ backgroundColor: `${p.color}25`, color: p.color }}
-                  aria-hidden="true"
-                >
-                  {p.icon}
+                <div className="flex items-start gap-3">
+                  <div
+                    className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
+                    style={{ backgroundColor: `${p.color}25`, color: p.color }}
+                    aria-hidden="true"
+                  >
+                    {p.icon}
+                  </div>
+                  <div>
+                    <p className="text-white font-bold text-sm mb-1">{p.title}</p>
+                    <p className="text-white/55 text-xs leading-relaxed">{p.desc}</p>
+                  </div>
                 </div>
-                <p className="text-white font-bold text-base mb-2">{p.title}</p>
-                <p className="text-white/55 text-sm leading-relaxed">{p.desc}</p>
               </motion.div>
             ))}
-          </motion.div>
-
-          {/* Footnote */}
-          <motion.div
-            variants={fadeUp}
-            className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 flex gap-4 items-start"
-          >
-            <div className="w-1 h-full min-h-[2.5rem] rounded-full bg-ps-red flex-shrink-0" aria-hidden="true" />
-            <p className="text-white/60 text-sm leading-relaxed">
-              Será mi primera experiencia como gerente y soy consciente de que todavía tengo
-              aspectos por desarrollar. Sin embargo, una de mis principales fortalezas es la
-              disposición para aprender, adaptarme rápidamente y asumir nuevos retos con
-              responsabilidad.
-            </p>
           </motion.div>
         </motion.div>
       </div>
