@@ -42,14 +42,13 @@ const stagger = {
 
 export default function About() {
   return (
-    <section id="sobre-mi" aria-labelledby="about-heading" className="bg-[#1d3461] text-white py-20 lg:py-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="sobre-mi" aria-labelledby="about-heading" className="bg-[#1d3461] text-white h-screen overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          className="grid grid-cols-12 gap-x-6 gap-y-12 items-start"
+          animate="visible"
+          className="grid grid-cols-12 gap-x-6 gap-y-6 items-start"
         >
           {/* Left: starburst + heading + bio */}
           <div className="col-span-12 lg:col-span-5">

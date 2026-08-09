@@ -23,11 +23,10 @@ const stagger = {
 
 export default function Achievements() {
   return (
-    <section id="aportado" aria-labelledby="achievements-heading" className="bg-white py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="aportado" aria-labelledby="achievements-heading" className="bg-white h-screen overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
         <motion.div
-          variants={stagger} initial="hidden" whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
+          variants={stagger} initial="hidden" animate="visible"
         >
           <motion.div variants={fadeUp} className="mb-12">
             <StarburstBadge number="03" className="mb-6" />

@@ -62,13 +62,12 @@ const stagger = {
 
 export default function Vision() {
   return (
-    <section id="vision" aria-labelledby="vision-heading" className="bg-[#1d3461] text-white py-20 lg:py-28 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="vision" aria-labelledby="vision-heading" className="bg-[#1d3461] text-white h-screen overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
+          animate="visible"
         >
           {/* Header */}
           <motion.div variants={fadeUp} className="mb-12">

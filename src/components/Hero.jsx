@@ -16,18 +16,18 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section
-      className="relative min-h-dvh flex flex-col bg-white"
+      className="relative h-screen flex flex-col bg-white overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Starburst — decorative section marker */}
-      <StarburstBadge number="01" className="absolute top-24 left-6 lg:top-28 lg:left-10 z-20" />
+      <StarburstBadge number="01" className="absolute top-14 left-6 lg:top-16 lg:left-10 z-20" />
 
       {/* Top: PriceSmart label */}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, delay: 0.1 }}
-        className="pt-28 lg:pt-32 pb-4 flex justify-center px-6"
+        className="pt-14 pb-2 flex justify-center px-6"
       >
         <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gray-400 uppercase">
           PriceSmart &mdash; Candidato Interno &mdash; 2026

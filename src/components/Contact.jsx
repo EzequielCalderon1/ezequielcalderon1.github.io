@@ -50,13 +50,12 @@ const stagger = {
 
 export default function Contact() {
   return (
-    <section id="cierre" aria-labelledby="contact-heading" className="bg-[#1d3461] text-white py-24 lg:py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section id="cierre" aria-labelledby="contact-heading" className="bg-[#1d3461] text-white h-screen overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
+          animate="visible"
           className="relative grid grid-cols-12 gap-x-6 gap-y-10 lg:gap-x-16 items-center"
         >
           {/* Red left accent bar */}
