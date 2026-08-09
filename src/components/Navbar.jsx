@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'Contacto', href: '#contacto' },
 ]
 
-export default function Navbar({ onOpenPresentation }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -62,22 +62,7 @@ export default function Navbar({ onOpenPresentation }) {
               </a>
             </motion.li>
           ))}
-          <motion.li
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.65, duration: 0.4 }}
-          >
-            <button
-              type="button"
-              onClick={onOpenPresentation}
-              className="inline-flex items-center gap-1.5 px-4 py-2 bg-ps-red text-white text-xs font-semibold rounded-full hover:bg-[#c8152f] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ps-red"
-            >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
-              </svg>
-              Presentación
-            </button>
-          </motion.li>
+
         </ul>
       </nav>
     </motion.header>
