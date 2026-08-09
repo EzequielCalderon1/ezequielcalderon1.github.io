@@ -131,23 +131,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* socials */}
-            <ul aria-label="Redes sociales" className="flex gap-3">
-              {SOCIALS.map(({ label, href, icon }) => (
-                <li key={label}>
-                  <motion.a
-                    href={href}
-                    aria-label={label}
-                    target="_blank"
-                    rel="noreferrer"
-                    whileHover={{ y: -3 }}
-                    className="flex items-center justify-center w-11 h-11 rounded-xl border border-white/20 bg-white/5 text-white/70 hover:text-white hover:border-white/40 hover:bg-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ps-red"
-                  >
-                    {icon}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
           </motion.div>
         </motion.div>
       </div>
