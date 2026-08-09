@@ -50,7 +50,7 @@ const stagger = {
 
 export default function Contact() {
   return (
-    <section id="contacto" aria-labelledby="contact-heading" className="bg-[#1d3461] text-white py-24 lg:py-32">
+    <section id="cierre" aria-labelledby="contact-heading" className="bg-[#1d3461] text-white py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <motion.div
           variants={stagger}
@@ -72,10 +72,10 @@ export default function Contact() {
 
           <motion.div variants={fadeUp} className="col-span-12 lg:col-span-7 relative">
             <motion.div variants={fadeUp}>
-              <StarburstBadge number="04" className="mb-6 w-16 h-16" />
+              <StarburstBadge number="06" className="mb-6 w-16 h-16" />
             </motion.div>
             <p className="font-mono text-[0.65rem] tracking-[0.25em] text-white/40 uppercase mb-5">
-              04 &mdash; Cierre
+              06 &mdash; Cierre
             </p>
             <h2
               id="contact-heading"

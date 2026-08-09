@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 
 const NAV_LINKS = [
   { label: 'Sobre mí', href: '#sobre-mi' },
-  { label: 'Trayectoria', href: '#trayectoria' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Aportado', href: '#aportado' },
+  { label: 'Visión', href: '#vision' },
+  { label: 'Desarrollo', href: '#desarrollo' },
+  { label: 'Cierre', href: '#cierre' },
 ]
 
 export default function Navbar() {
