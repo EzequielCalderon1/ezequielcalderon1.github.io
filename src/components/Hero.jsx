@@ -22,16 +22,23 @@ export default function Hero() {
       {/* Starburst — decorative section marker */}
       <StarburstBadge number="01" className="absolute top-14 left-6 lg:top-16 lg:left-10 z-20" />
 
-      {/* Top: PriceSmart label */}
+      {/* Top: PriceSmart logo */}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.55, delay: 0.1 }}
         className="pt-14 pb-2 flex justify-center px-6"
       >
-        <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gray-400 uppercase">
-          PriceSmart &mdash; Candidato Interno &mdash; 2026
-        </p>
+        <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#1d3461] rounded-full">
+          <img
+            src="/pricesmartid.svg"
+            alt="PriceSmart"
+            width={96}
+            height={31}
+            className="h-[1.6rem] w-auto"
+          />
+          <span className="font-mono text-[0.6rem] tracking-[0.2em] text-white/60 uppercase">Candidato Interno &mdash; 2026</span>
+        </div>
       </motion.div>
 
       {/* Center: heading + pill subtitle */}

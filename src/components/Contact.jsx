@@ -122,9 +122,13 @@ export default function Contact() {
               <p className="font-mono text-[0.6rem] tracking-[0.2em] text-white/40 uppercase">
                 Ejecutivo B2B &mdash; Candidato a Gerente B2B
               </p>
-              <p className="font-mono text-[0.55rem] tracking-[0.2em] text-white/25 uppercase mt-1">
-                PriceSmart Costa Rica &mdash; 2026
-              </p>
+              <div className="mt-4 pt-4 border-t border-white/10">
+                <img
+                  src="/pricesmartid.svg"
+                  alt="PriceSmart"
+                  className="h-[1.4rem] w-auto opacity-60"
+                />
+              </div>
             </div>
 
             {/* socials */}
