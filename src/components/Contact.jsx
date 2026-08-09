@@ -3,6 +3,11 @@
 import { motion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
 
+const COMMITMENTS = [
+  'Responsabilidad', 'Compromiso', 'Aprendizaje continuo',
+  'Cercanía al equipo', 'Orientación a resultados',
+]
+
 const SOCIALS = [
   {
     label: 'GitHub',
@@ -70,38 +75,60 @@ export default function Contact() {
               <StarburstBadge number="04" className="mb-6 w-16 h-16" />
             </motion.div>
             <p className="font-mono text-[0.65rem] tracking-[0.25em] text-white/40 uppercase mb-5">
-              04 &mdash; Contacto
+              04 &mdash; Cierre
             </p>
             <h2
               id="contact-heading"
-              className="font-display uppercase text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight text-white mb-5"
+              className="font-display uppercase text-6xl lg:text-7xl xl:text-8xl leading-[0.9] tracking-tight text-white mb-6"
             >
-              Trabajemos<br />
+              Listo para<br />
               <span className="bg-gradient-to-r from-blue-200 to-ps-red bg-clip-text text-transparent">
-                juntos.
+                el reto.
               </span>
             </h2>
-            <p className="text-white/60 text-sm leading-relaxed max-w-sm">
-              Gracias por la oportunidad de presentarme.
-              Estoy listo para el siguiente paso.
-            </p>
+
+            {/* commitment statement */}
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 mb-6">
+              <p className="text-white/75 text-sm leading-[1.9]">
+                Si me brindan la oportunidad, encontrarán en mí a una persona{' '}
+                <strong className="text-white">cercana al equipo</strong>, enfocada en{' '}
+                <strong className="text-white">los resultados</strong>, comprometida con el{' '}
+                <strong className="text-white">desarrollo de las personas</strong> y dispuesta
+                a dar lo mejor de sí para hacer crecer el departamento, apoyar al club y
+                contribuir al éxito de PriceSmart.
+              </p>
+            </div>
+
+            {/* commitment pills */}
+            <div className="flex flex-wrap gap-2">
+              {COMMITMENTS.map((item) => (
+                <span
+                  key={item}
+                  className="px-3.5 py-1.5 rounded-full border border-ps-red/30 bg-ps-red/10 text-ps-red/90 text-xs font-medium tracking-wide"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
             variants={fadeUp}
-            className="col-span-12 lg:col-span-5 flex flex-col gap-4"
+            className="col-span-12 lg:col-span-5 flex flex-col justify-center gap-6"
           >
-            <a
-              href="mailto:ezequiel@email.com"
-              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-white text-ps-navy text-sm font-semibold rounded-xl shadow-md hover:bg-ps-red hover:text-white active:scale-[0.98] transition-all focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect width="20" height="16" x="2" y="4" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              Enviar mensaje
-            </a>
+            {/* name card */}
+            <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-6">
+              <div className="w-10 h-[2px] bg-ps-red mb-5" aria-hidden="true" />
+              <p className="text-white font-bold text-lg mb-1">Ezequiel Calderón Dinarte</p>
+              <p className="font-mono text-[0.6rem] tracking-[0.2em] text-white/40 uppercase">
+                Ejecutivo B2B &mdash; Candidato a Gerente B2B
+              </p>
+              <p className="font-mono text-[0.55rem] tracking-[0.2em] text-white/25 uppercase mt-1">
+                PriceSmart Costa Rica &mdash; 2026
+              </p>
+            </div>
 
+            {/* socials */}
             <ul aria-label="Redes sociales" className="flex gap-3">
               {SOCIALS.map(({ label, href, icon }) => (
                 <li key={label}>
