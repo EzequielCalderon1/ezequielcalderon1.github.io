@@ -12,6 +12,17 @@
   ::-webkit-scrollbar-thumb:hover { background: #e31837; }
 }
 
+@layer components {
+  .bg-grid-light {
+    background-image: radial-gradient(circle, rgba(29, 52, 97, 0.08) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .bg-grid-dark {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

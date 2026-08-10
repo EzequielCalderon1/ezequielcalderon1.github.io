@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
+import GrowthBackdrop from './GrowthBackdrop'
 
 const container = {
   hidden: {},
@@ -16,7 +17,7 @@ const fadeUp = {
 export default function Hero() {
   return (
     <section
-      className="relative h-screen flex flex-col bg-white overflow-hidden"
+      className="relative h-screen flex flex-col bg-white bg-grid-light overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Starburst — decorative section marker */}
@@ -42,13 +43,16 @@ export default function Hero() {
       </motion.div>
 
       {/* Center: heading + pill subtitle */}
-      <div className="flex-1 flex flex-col items-center justify-center px-6 lg:px-16 py-6">
+      <div className="relative flex-1 flex flex-col items-center justify-center px-6 lg:px-16 py-6 overflow-hidden">
+        {/* telón animado — crecimiento / resultados */}
+        <GrowthBackdrop />
+
         <motion.h1
           id="hero-heading"
           variants={container}
           initial="hidden"
           animate="visible"
-          className="font-display uppercase text-center leading-[0.88] tracking-tight w-full"
+          className="relative z-10 font-display uppercase text-center leading-[0.88] tracking-tight w-full"
           style={{ fontSize: 'clamp(3.2rem, 14vw, 13rem)' }}
         >
           <motion.span variants={fadeUp} className="block overflow-hidden">
@@ -63,7 +67,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.55, duration: 0.5 }}
-          className="mt-8 md:mt-10 inline-flex items-center px-7 py-2.5 border border-gray-800 rounded-full text-sm tracking-wide text-gray-800"
+          className="relative z-10 mt-8 md:mt-10 inline-flex items-center px-7 py-2.5 border border-gray-800 rounded-full bg-white/70 backdrop-blur-[2px] text-sm tracking-wide text-gray-800"
         >
           Experiencia · Colaboración · Resultados
         </motion.p>

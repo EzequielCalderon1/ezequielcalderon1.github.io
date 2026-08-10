@@ -42,7 +42,7 @@ const stagger = {
 
 export default function About() {
   return (
-    <section id="sobre-mi" aria-labelledby="about-heading" className="bg-[#1d3461] text-white h-screen overflow-hidden">
+    <section id="sobre-mi" aria-labelledby="about-heading" className="bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
@@ -53,7 +53,7 @@ export default function About() {
           {/* Left: starburst + heading + bio */}
           <div className="col-span-12 lg:col-span-5">
             <motion.div variants={fadeUp}>
-              <StarburstBadge number="02" className="mb-6 w-16 h-16" />
+              <StarburstBadge number="02" className="mb-6" />
             </motion.div>
             <motion.p variants={fadeUp} className="font-mono text-[0.65rem] tracking-[0.25em] text-white/40 uppercase mb-5">
               02 &mdash; Sobre mí
@@ -67,24 +67,24 @@ export default function About() {
               <span className="text-ps-red">Calderón</span>
             </motion.h2>
 
-            {/* Values card */}
-            <motion.div variants={fadeUp} className="rounded-2xl border border-ps-red/30 bg-ps-red/5 p-5 mb-5">
-              <p className="font-mono text-[0.6rem] tracking-[0.2em] text-ps-red/70 uppercase mb-3">Valores que me guían</p>
-              <p className="text-white/70 text-sm leading-relaxed">
-                Me identifico plenamente con los valores de PriceSmart, especialmente
-                con la <strong className="text-white">integridad</strong>. La confianza,
-                el respeto y el trabajo en equipo son la base para construir equipos
-                sólidos y relaciones duraderas con colaboradores y socios.
-              </p>
-            </motion.div>
-
-            {/* Education card */}
-            <motion.div variants={fadeUp} className="rounded-2xl border border-ps-blue/30 bg-ps-blue/5 p-5">
-              <p className="font-mono text-[0.6rem] tracking-[0.2em] text-ps-blue/70 uppercase mb-2">Formación actual</p>
-              <p className="text-white font-semibold text-sm">Estudiante de Derecho</p>
-              <p className="text-white/50 text-xs mt-1 leading-relaxed">
-                El aprendizaje continuo es una responsabilidad personal y profesional.
-              </p>
+            {/* Dossier card — values + education, unified */}
+            <motion.div variants={fadeUp} className="rounded-2xl border border-white/10 bg-white/[0.03] divide-y divide-white/10 overflow-hidden">
+              <div className="p-5">
+                <p className="font-mono text-[0.6rem] tracking-[0.2em] text-ps-red uppercase mb-3">Valores que me guían</p>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Me identifico plenamente con los valores de PriceSmart, especialmente
+                  con la <strong className="text-white">integridad</strong>. La confianza,
+                  el respeto y el trabajo en equipo son la base para construir equipos
+                  sólidos y relaciones duraderas con colaboradores y socios.
+                </p>
+              </div>
+              <div className="p-5">
+                <p className="font-mono text-[0.6rem] tracking-[0.2em] text-ps-blue uppercase mb-2">Formación actual</p>
+                <p className="text-white font-semibold text-sm">Estudiante de Derecho</p>
+                <p className="text-white/50 text-xs mt-1 leading-relaxed">
+                  El aprendizaje continuo es una responsabilidad personal y profesional.
+                </p>
+              </div>
             </motion.div>
           </div>
 
@@ -107,7 +107,7 @@ export default function About() {
                       <span className="font-mono text-[0.65rem] text-white/40 tracking-wider">{item.year}</span>
                     </div>
                     <div
-                      className="relative z-10 flex-shrink-0 mt-1.5 w-3 h-3 rounded-full border-2"
+                      className="relative z-10 flex-shrink-0 mt-1.5 w-3 h-3 rounded-full border-2 ring-4 ring-[#1d3461]"
                       style={{ borderColor: item.color, backgroundColor: item.color }}
                       aria-hidden="true"
                     />
