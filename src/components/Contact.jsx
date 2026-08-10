@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="absolute -bottom-48 -left-40 w-[560px] h-[560px] rounded-full bg-ps-blue/20 blur-[130px] animate-drift-slow" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-8 h-full flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full flex items-center">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -86,6 +86,12 @@ export default function Contact() {
               </motion.span>
             </motion.h2>
 
+            {/* Agradecimiento */}
+            <motion.p variants={fadeUp} className="text-white/60 text-sm leading-relaxed mb-5">
+              Quiero agradecer nuevamente el tiempo y la oportunidad de participar en este
+              proceso. Para mí siempre es un orgullo participar en entrevistas como estas.
+            </motion.p>
+
             {/* Declaración de compromiso */}
             <motion.div
               variants={fadeUp}
@@ -98,12 +104,12 @@ export default function Contact() {
                 &ldquo;
               </span>
               <p className="relative text-white/75 text-sm leading-[1.85]">
-                Si me brindan la oportunidad, encontrarán en mí a una persona{' '}
+                Si se me brinda la oportunidad, encontrarán en mí a una persona{' '}
                 <strong className="text-white">cercana al equipo</strong>, enfocada en{' '}
                 <strong className="text-white">los resultados</strong>, comprometida con el{' '}
                 <strong className="text-white">desarrollo de las personas</strong> y dispuesta
                 a dar lo mejor de sí para hacer crecer el departamento, apoyar al club y
-                contribuir al éxito de PriceSmart.
+                contribuir de la mejor manera a PriceSmart.
               </p>
             </motion.div>
 
@@ -123,16 +129,23 @@ export default function Contact() {
 
           {/* ── Columna derecha ── */}
           <div className="col-span-12 lg:col-span-5 flex flex-col gap-5">
-            {/* Cita */}
-            <motion.blockquote
+            {/* Tres años de preparación */}
+            <motion.div
               variants={fadeUp}
-              className="relative rounded-2xl border-l-2 border-ps-red/60 bg-white/[0.03] pl-5 pr-5 py-4"
+              className="rounded-2xl border-l-2 border-ps-red/60 bg-white/[0.03] pl-5 pr-5 py-4"
             >
-              <p className="text-white/70 text-sm italic leading-relaxed">
-                El crecimiento comienza cuando uno sale de su zona de comodidad
-                y se pone a prueba en nuevos ámbitos.
+              <p className="text-white/70 text-sm leading-relaxed mb-3">
+                Durante estos tres años me he preparado y trabajado duro para seguir
+                creciendo dentro de PriceSmart y aportar cada vez más valor a la
+                organización.
               </p>
-            </motion.blockquote>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Estoy convencido de que puedo asumir este reto con
+                <strong className="text-white"> responsabilidad</strong>,
+                <strong className="text-white"> compromiso</strong> y muchas ganas de
+                seguir aprendiendo.
+              </p>
+            </motion.div>
 
             {/* Tarjeta de firma */}
             <motion.div
@@ -173,7 +186,7 @@ export default function Contact() {
                 aria-hidden="true"
               />
               <p className="font-mono text-[0.65rem] tracking-[0.25em] text-white/45 uppercase">
-                Gracias por la oportunidad
+                Muchas gracias &mdash; quedo atento a cualquier consulta
               </p>
             </motion.div>
           </div>

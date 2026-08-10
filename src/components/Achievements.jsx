@@ -11,7 +11,7 @@ const iconProps = {
 const CONTRIBUTIONS = [
   {
     title: 'Cargas de portafolio',
-    desc: 'Participación directa en procesos de carga y gestión de portafolio del departamento B2B.',
+    desc: 'He realizado cargas de portafolio del departamento.',
     icon: (
       <svg {...iconProps}>
         <path d="M12 2 2 7l10 5 10-5-10-5z" />
@@ -21,8 +21,8 @@ const CONTRIBUTIONS = [
     ),
   },
   {
-    title: 'Resolución operativa',
-    desc: 'Apoyo en la resolución de problemas operativos del día a día del departamento.',
+    title: 'Resolución de problemas operativos',
+    desc: 'Resolución de los problemas operativos del día a día del departamento.',
     icon: (
       <svg {...iconProps}>
         <circle cx="12" cy="12" r="3" />
@@ -31,8 +31,8 @@ const CONTRIBUTIONS = [
     ),
   },
   {
-    title: 'Zonas secundarias',
-    desc: 'Gestión de Turrialba y Pérez Zeledón. Seguimiento constante y estrategias adaptadas a cada mercado.',
+    title: 'Seguimiento a zona secundaria',
+    desc: 'Seguimiento al ejecutivo de zona secundaria.',
     icon: (
       <svg {...iconProps}>
         <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
@@ -41,8 +41,8 @@ const CONTRIBUTIONS = [
     ),
   },
   {
-    title: 'Socios estratégicos',
-    desc: 'Reuniones con socios estratégicos y presentación de resultados en reuniones a nivel país.',
+    title: 'Reuniones con socios top',
+    desc: 'De manera presencial en nuestro club, haciendo caminatas, y también en sus respectivos negocios.',
     icon: (
       <svg {...iconProps}>
         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
@@ -53,23 +53,23 @@ const CONTRIBUTIONS = [
     ),
   },
   {
-    title: 'Cobertura de gerencia',
-    desc: 'Apoyo al departamento en ausencia de la gerencia: toma de decisiones, organización del equipo y liderazgo operativo.',
-    icon: (
-      <svg {...iconProps}>
-        <circle cx="12" cy="12" r="10" />
-        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Resultados comerciales',
-    desc: 'Administración de cartera, visitas comerciales y desarrollo de nuevos negocios como Ejecutivo B2B.',
+    title: 'Presentación de resultados',
+    desc: 'Como escucha y en participación activa, dando números, KPI, proyecciones y planes de acción para el club 06.',
     icon: (
       <svg {...iconProps}>
         <path d="M18 20V10" />
         <path d="M12 20V4" />
         <path d="M6 20v-6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Cobertura de la gerencia',
+    desc: 'Apoyo al departamento cuando Sebastián no se encontraba presente: toma de decisiones, organización del equipo y la responsabilidad que implica liderar un departamento.',
+    icon: (
+      <svg {...iconProps}>
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
       </svg>
     ),
   },
@@ -89,12 +89,12 @@ const stagger = {
 export default function Achievements() {
   return (
     <section id="aportado" aria-labelledby="achievements-heading" className="bg-white bg-grid-light h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
         <motion.div
           variants={stagger} initial="hidden" animate="visible"
         >
-          <motion.div variants={fadeUp} className="mb-10">
-            <StarburstBadge number="03" className="mb-6" />
+          <motion.div variants={fadeUp} className="mb-8">
+            <StarburstBadge number="03" className="mb-5" />
             <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gray-400 uppercase mb-3">
               03 &mdash; Lo que he aportado
             </p>
@@ -105,9 +105,13 @@ export default function Achievements() {
               Mi aporte<br />
               <span className="text-ps-red">hasta hoy</span>
             </h2>
-            <p className="text-gray-500 text-sm lg:text-base max-w-xl leading-relaxed">
-              He recorrido cada etapa del departamento: asistente, ejecutivo y
-              responsabilidades propias de la gerencia.
+            <p className="text-gray-500 text-sm lg:text-base max-w-3xl leading-relaxed">
+              Una de las fortalezas que considero más importantes es haber recorrido cada
+              una de las etapas del departamento. Conozco las funciones del asistente, del
+              ejecutivo, y también he tenido la oportunidad de involucrarme en
+              responsabilidades propias de la gerencia gracias al apoyo y la confianza de
+              <strong className="text-ps-navy"> Jesús</strong> y
+              <strong className="text-ps-navy"> Sebastián</strong>.
             </p>
           </motion.div>
 
@@ -147,25 +151,48 @@ export default function Achievements() {
             })}
           </motion.div>
 
-          {/* key advantage */}
-          <motion.div
-            variants={fadeUp}
-            className="rounded-2xl border border-ps-blue/25 bg-ps-blue/5 p-6 flex gap-5 items-start"
-          >
-            <div className="w-10 h-10 rounded-full bg-ps-navy flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-              </svg>
-            </div>
-            <div>
-              <p className="text-ps-navy font-bold text-sm mb-1">Ventaja clave: curva de aprendizaje reducida</p>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Conozco el funcionamiento interno del departamento desde todas sus aristas.
-                Eso me permite asumir esta posición con menos tiempo de adaptación y
-                más tiempo enfocado en generar resultados desde el primer día.
-              </p>
-            </div>
-          </motion.div>
+          {/* cierre: ventaja clave + operaciones del club */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <motion.div
+              variants={fadeUp}
+              className="rounded-2xl border border-ps-blue/25 bg-ps-blue/5 p-5 flex gap-4 items-start"
+            >
+              <div className="w-10 h-10 rounded-full bg-ps-navy flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-ps-navy font-bold text-sm mb-1">Ventaja clave: curva de aprendizaje reducida</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Todavía tengo mucho por aprender, pero considero que llego con una ventaja
+                  importante: conozco el funcionamiento del departamento y eso reduce
+                  significativamente la curva de aprendizaje.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              className="rounded-2xl border border-gray-200 bg-gray-50/60 p-5 flex gap-4 items-start"
+            >
+              <div className="w-10 h-10 rounded-full bg-ps-red flex items-center justify-center flex-shrink-0 mt-0.5" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 21h18" />
+                  <path d="M5 21V7l7-4 7 4v14" />
+                  <path d="M10 21v-6h4v6" />
+                </svg>
+              </div>
+              <div>
+                <p className="text-ps-navy font-bold text-sm mb-1">Operaciones del club</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  A pesar de no haber estado a cargo de otra área, en los momentos de apoyo
+                  me he involucrado en las operaciones del club para entender cómo funciona
+                  cada una de ellas en su día a día.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -14,7 +14,7 @@ const PILLARS = [
         <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
       </svg>
     ),
-    desc: 'Cada persona sabe su función y cómo impacta en el resultado del equipo.',
+    desc: 'Cada integrante del departamento debe tener absoluta claridad sobre sus responsabilidades. Cuando cada persona conoce su función y entiende cómo impacta en el resultado del equipo, el departamento trabaja de manera mucho más eficiente.',
   },
   {
     number: '02',
@@ -25,29 +25,29 @@ const PILLARS = [
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
       </svg>
     ),
-    desc: 'Cercana, clara y respetuosa: confianza para expresar dudas y proponer mejoras.',
+    desc: 'Cercana, clara y respetuosa. Las personas deben sentirse en confianza para expresar dudas, proponer mejoras o hablar sobre cualquier situación. Ante una oportunidad de mejora: conversar directamente con el colaborador, acompañarlo en su desarrollo y, cuando sea necesario, seguir los procesos disciplinarios correspondientes.',
   },
   {
     number: '03',
-    title: 'Seguimiento',
+    title: 'Seguimiento activo',
     color: '#e31837',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
       </svg>
     ),
-    desc: 'Ventas, visitas y objetivos revisados durante el mes, no solo al cierre.',
+    desc: 'Lo que no se mide, difícilmente mejora. Seguimiento constante a ventas, visitas, oportunidades con nuestros socios, desarrollo de portafolio y cumplimiento de objetivos, para tomar decisiones oportunas durante el mes y no únicamente al cierre.',
   },
   {
     number: '04',
-    title: 'Compromiso con el club',
+    title: 'Compromiso con todo el club',
     color: '#eaf1fb',
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
       </svg>
     ),
-    desc: 'Apoyar la operación del club y los objetivos generales de PriceSmart.',
+    desc: 'Una gerencia B2B no se limita únicamente al departamento. También implica apoyar la operación general del club cuando sea necesario, colaborar con otros departamentos y aportar al cumplimiento de los objetivos generales de PriceSmart.',
   },
 ]
 
@@ -66,7 +66,8 @@ export default function Vision() {
 
   return (
     <section id="vision" aria-labelledby="vision-heading" className="bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-10 h-full flex flex-col">
+      {/* pb-24 reserva la franja inferior que ocupa la navegación flotante */}
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full flex flex-col">
         {/* Header — compact */}
         <motion.div variants={fadeUp} initial="hidden" animate="visible" className="mb-6 flex-shrink-0">
           <StarburstBadge number="04" className="mb-3" />
@@ -80,9 +81,8 @@ export default function Vision() {
             Cuatro <span className="text-ps-red">pilares</span>
           </h2>
           <p className="text-white/50 text-xs lg:text-sm max-w-2xl leading-relaxed">
-            Mi enfoque como gerente se sostiene en cuatro pilares de igual peso.
-            Sé que todavía tengo aspectos por desarrollar, pero mi principal fortaleza
-            es la disposición para aprender y asumir nuevos retos con responsabilidad.
+            Si tuviera la oportunidad de asumir el departamento el día de hoy,
+            mi enfoque estaría basado en cuatro pilares.
           </p>
         </motion.div>
 
@@ -135,7 +135,7 @@ export default function Vision() {
 
                   {/* Ficha */}
                   <motion.div
-                    className="w-full min-h-[76px] flex flex-col justify-center rounded-lg border border-dashed px-3 py-2.5 bg-white/[0.03] flex-shrink-0 transition-colors duration-300 group-hover:bg-white/[0.08]"
+                    className="w-full min-h-[142px] flex flex-col justify-center rounded-lg border border-dashed px-3 py-3 bg-white/[0.03] flex-shrink-0 transition-colors duration-300 group-hover:bg-white/[0.08]"
                     style={{ borderColor: `${p.color}66` }}
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -248,6 +248,22 @@ export default function Vision() {
             })}
           </ul>
         </div>
+
+        {/* Cierre — honestidad sobre el reto */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: EASE, delay: 1.5 }}
+          className="flex-shrink-0 mt-5 border-l-2 border-ps-red/60 pl-4"
+        >
+          <p className="text-white/60 text-xs lg:text-sm leading-relaxed max-w-4xl">
+            Será mi primera experiencia como gerente y soy consciente de que todavía tengo
+            aspectos por desarrollar. Sin embargo, una de mis principales fortalezas es la
+            <strong className="text-white"> disposición para aprender</strong>,
+            <strong className="text-white"> adaptarme rápidamente</strong> y asumir nuevos
+            retos con responsabilidad.
+          </p>
+        </motion.div>
       </div>
     </section>
   )

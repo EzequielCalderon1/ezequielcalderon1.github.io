@@ -18,16 +18,17 @@ const AREAS = [
         <polyline points="14 7 21 7 21 14" />
       </svg>
     ),
-    summary: 'Recuperar socios y convertir comportamientos negativos en oportunidades de crecimiento.',
+    summary: 'Recuperar socios, agregar cuentas nuevas y hacer crecer a nuestros socios top.',
     points: [
-      'El club viene logrando buenos resultados; sin embargo, existen negocios con comportamientos negativos.',
-      'Analizar cada caso junto al equipo e identificar las causas raíz.',
-      'Construir estrategias específicas para recuperar esos socios.',
-      'Convertir esos negocios nuevamente en oportunidades de crecimiento.',
+      'El club viene logrando buenos resultados; sin embargo, existen negocios que actualmente presentan negativos bastante marcados.',
+      'Analizar cada caso junto con el equipo e identificar las causas.',
+      'Construir estrategias específicas para recuperar esos socios y convertir nuevamente esos negocios en oportunidades de crecimiento.',
+      'Seguir agregando cuentas nuevas al portafolio.',
+      'Crecimiento constante con nuestros socios top, donde agregar una sola línea hace la diferencia.',
     ],
   },
   {
-    title: 'Zona Secundaria — Puerto',
+    title: 'Zona secundaria — Puerto',
     color: '#2e5ea6',
     icon: (
       <svg {...iconProps}>
@@ -36,12 +37,13 @@ const AREAS = [
         <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
       </svg>
     ),
-    summary: 'Aprovechar la incorporación de Puerto con un análisis de mercado enfocado en turismo y pesca.',
+    summary: 'Aprovechar la incorporación del Puerto y ampliar nuestra presencia en esa zona.',
     points: [
-      'Puerto representa una oportunidad importante, impulsada por el turismo y la pesca.',
-      'Realizar un análisis completo del mercado e identificar oportunidades reales.',
-      'Desarrollar rutas que permitan hacer rentable la operación.',
-      'Experiencia en Turrialba y Pérez Zeledón como base de aprendizaje.',
+      'La incorporación del Puerto representa una oportunidad importante para el departamento.',
+      'Zona con características muy particulares, impulsada por el turismo local e internacional y la pesca.',
+      'Análisis completo del tipo de negocio que encontramos e identificación de oportunidades reales.',
+      'Desarrollar una ruta que sí consiga ser rentable a nivel de transporte y gastos del ejecutivo.',
+      'Turrialba y Pérez Zeledón me enseñaron a adaptar la estrategia a cada tipo de negocio y mantener un seguimiento constante.',
     ],
   },
   {
@@ -57,10 +59,11 @@ const AREAS = [
     ),
     summary: 'Fortalecer la cultura de crecimiento interno que a mí mismo me permitió avanzar.',
     points: [
-      'Creo firmemente en el crecimiento interno — yo mismo lo viví desde Puertas hasta Ejecutivo.',
-      'Planes de capacitación y entrenamientos continuos.',
-      'Preparación de futuros asistentes y ejecutivos.',
-      'Que el departamento cuente siempre con personas listas para asumir nuevos retos.',
+      'Creo firmemente en el crecimiento interno: yo mismo avancé desde Puertas hasta Ejecutivo gracias a personas que confiaron en mí.',
+      'Planes de training para el equipo.',
+      'Preparación para futuros asistentes y ejecutivos.',
+      'Que el departamento cuente siempre con personas preparadas para asumir nuevos retos.',
+      'Que el crecimiento del equipo sea sostenible.',
     ],
   },
 ]
@@ -77,15 +80,15 @@ const stagger = {
 export default function Development() {
   return (
     <section id="desarrollo" aria-labelledby="development-heading" className="bg-white bg-grid-light h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-6 h-full overflow-y-auto">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
           initial="hidden"
           animate="visible"
         >
           {/* Header */}
-          <motion.div variants={fadeUp} className="mb-14">
-            <StarburstBadge number="05" className="mb-6" />
+          <motion.div variants={fadeUp} className="mb-8">
+            <StarburstBadge number="05" className="mb-5" />
             <p className="font-mono text-[0.65rem] tracking-[0.25em] text-gray-400 uppercase mb-3">
               05 &mdash; Lo que quiero desarrollar
             </p>
@@ -98,7 +101,7 @@ export default function Development() {
             </h2>
             <p className="text-gray-500 text-sm lg:text-base max-w-xl leading-relaxed">
               Si tuviera la oportunidad de liderar este departamento, enfocaría los esfuerzos
-              en estas tres áreas prioritarias.
+              en tres áreas principales.
             </p>
           </motion.div>
 
