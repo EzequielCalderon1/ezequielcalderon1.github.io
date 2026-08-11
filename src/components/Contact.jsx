@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
+import SlideWaves from './SlideWaves'
 
 const COMMITMENTS = [
   'Responsabilidad', 'Compromiso', 'Aprendizaje continuo',
@@ -39,6 +40,8 @@ export default function Contact() {
       aria-labelledby="contact-heading"
       className="relative bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden"
     >
+      <SlideWaves theme="dark" />
+
       {/* Ambient glow */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full bg-ps-red/10 blur-[130px] animate-drift" />

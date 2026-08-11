@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
+import SlideWaves from './SlideWaves'
 
 const PILLARS = [
   {
@@ -65,9 +66,11 @@ export default function Vision() {
   const reduce = useReducedMotion()
 
   return (
-    <section id="vision" aria-labelledby="vision-heading" className="bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
+    <section id="vision" aria-labelledby="vision-heading" className="relative bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
+      <SlideWaves theme="dark" />
+
       {/* pb-24 reserva la franja inferior que ocupa la navegación flotante */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full flex flex-col">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full flex flex-col">
         {/* Header — compact */}
         <motion.div variants={fadeUp} initial="hidden" animate="visible" className="mb-6 flex-shrink-0">
           <StarburstBadge number="04" className="mb-3" />

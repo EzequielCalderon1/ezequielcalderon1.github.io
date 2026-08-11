@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
+import SlideWaves from './SlideWaves'
 
 const TIMELINE = [
   {
@@ -38,8 +39,10 @@ const stagger = {
 
 export default function About() {
   return (
-    <section id="sobre-mi" aria-labelledby="about-heading" className="bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
+    <section id="sobre-mi" aria-labelledby="about-heading" className="relative bg-[#1d3461] bg-grid-dark text-white h-screen overflow-hidden">
+      <SlideWaves theme="dark" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
         <motion.div
           variants={stagger}
           initial="hidden"

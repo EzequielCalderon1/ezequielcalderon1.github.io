@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import StarburstBadge from './StarburstBadge'
+import SlideWaves from './SlideWaves'
 
 const iconProps = {
   width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none',
@@ -88,8 +89,10 @@ const stagger = {
 
 export default function Achievements() {
   return (
-    <section id="aportado" aria-labelledby="achievements-heading" className="bg-white bg-grid-light h-screen overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
+    <section id="aportado" aria-labelledby="achievements-heading" className="relative bg-white bg-grid-light h-screen overflow-hidden">
+      <SlideWaves theme="light" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-14 pb-24 h-full overflow-y-auto">
         <motion.div
           variants={stagger} initial="hidden" animate="visible"
         >
